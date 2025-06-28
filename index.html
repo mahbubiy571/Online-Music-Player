@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Music Player</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <img
+        id="cover"
+        class="cover"
+        src="./images/Weeknd - Blinding Lights.png"
+        alt=""
+        width="200"
+      />
+      <div class="music-item">
+      <h4 id="music-title">Weeknd - Blinding Lights</h4>
+        <div class="speed-menu-container">
+          <button id="menuBtn">🎵</button>
+          <ul id="speedMenu" class="hidden">
+            <li><a id="download" href="./audios/Saad Lamjarred - Enty.mp3" download><i class="fa-solid fa-download"></i></a></li>
+            <li data-speed="0.5">0.5x</li>
+            <li data-speed="1">1x</li>
+            <li data-speed="1.5">1.5x</li>
+            <li data-speed="2">2x</li>
+          </ul>
+        </div>
+      </div>
+      <h3 id="volume-title">volume: <span></span></h3>
+      <div class="audio-settings">
+        <button id="volumeIcon">🔊</button>
+        <input
+          id="volume-changer"
+          type="range"
+          value="40"
+          min="0"
+          max="100"
+          step="1"
+        />
+        <audio
+          src="./audios/Saad Lamjarred - Enty.mp3"
+          preload="metadata"
+        ></audio>
+      </div>
+      <div class="progress-and-time">
+        <span id="current-time">00:00</span>
+        <div class="progress-container">
+          <div class="progress"></div>
+        </div>
+        <span id="duration">00:00</span>
+      </div>
+      <div>
+        <button id="backward"><i class="fa-solid fa-backward-step"></i></button>
+        <button id="play"><i class="fa-solid fa-play"></i></button>
+        <button id="forward"><i class="fa-solid fa-forward-step"></i></button>
+      </div>
+    </div>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
