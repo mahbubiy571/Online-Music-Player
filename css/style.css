@@ -118,14 +118,14 @@ body {
   transition: 0.3s;
 }
 
-.cover {
+#cover {
   border-radius: 50%;
   animation: cover 10s linear infinite;
   animation-play-state: paused;
   object-fit: cover;
 }
 
-.container.play .cover {
+.container.play #cover {
   animation-play-state: running;
 }
 
